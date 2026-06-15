@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phoenix Mindset Stories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <p class="tag">Interactive Life Choice Website</p>
+    <h1>Cockroach Mindset vs Phoenix Mindset</h1>
+    <p>
+      Every decision becomes a scene. Every choice becomes a future.
+      Choose laziness and fall. Choose discipline and rise.
+    </p>
+    <a href="#stories" class="main-btn">Start Story Journey</a>
+  </div>
+</header>
+
+<section class="intro">
+  <h2>Two Mindsets. Two Destinies.</h2>
+  <div class="mindset-box">
+    <div class="roach">
+      <h3>🪳 Cockroach Mindset</h3>
+      <p>Complains, blames others, waits for freebies, avoids skills, wastes time, loses opportunities.</p>
+    </div>
+    <div class="phoenix">
+      <h3>🔥 Phoenix Mindset</h3>
+      <p>Learns daily, works hard, builds skills, accepts responsibility, rises after failure, creates success.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stories" class="stories">
+  <h2>Choose Your Character</h2>
+  <p class="section-subtitle">Each character has a life journey shaped by your choices.</p>
+
+  <div class="story-grid" id="storyGrid"></div>
+</section>
+
+<section class="game hidden" id="gameSection">
+  <button class="back-btn" onclick="goHome()">← Back to Stories</button>
+
+  <div class="scene-card">
+    <p id="sceneCount"></p>
+    <h2 id="characterName"></h2>
+    <h3 id="sceneTitle"></h3>
+    <p id="sceneText"></p>
+
+    <div class="choice-area">
+      <button class="choice roach-choice" onclick="chooseMindset('roach')">
+        Choose Cockroach Mindset
+      </button>
+      <button class="choice phoenix-choice" onclick="chooseMindset('phoenix')">
+        Choose Phoenix Mindset
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="ending hidden" id="endingSection">
+  <div id="endingBox"></div>
+  <button class="main-btn" onclick="goHome()">Play Another Story</button>
+</section>
+
+<footer>
+  <p>Built for Phoenix Mindset Philosophy — Learn. Improve. Rise.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+  </html>
