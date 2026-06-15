@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #050505;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.tag {
+  color: #ffcc66;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  background: linear-gradient(90deg, #ffcc66, #ff4d00);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.main-btn,
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #ffb703, #ff4500);
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(255, 100, 0, .6);
+}
+
+.intro,
+.stories,
+.game,
+.ending {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  color: #bbb;
+  margin-bottom: 35px;
+}
+
+.mindset-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.mindset-box div,
+.story-card,
+.scene-card,
+#endingBox {
+  border-radius: 25px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+}
+
+.roach {
+  background: linear-gradient(145deg, #151515, #2b1a1a);
+  border: 1px solid #5a2a2a;
+  box-shadow: 0 0 25px rgba(80, 0, 0, .4);
+}
+
+.phoenix {
+  background: linear-gradient(145deg, #251000, #4b2100);
+  border: 1px solid #ff9f1c;
+  box-shadow: 0 0 30px rgba(255, 111, 0, .5);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.story-card {
+  min-height: 260px;
+  background: linear-gradient(145deg, #111, #1f1f1f);
+  border: 1px solid #333;
+  text-align: left;
+  cursor: pointer;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffb703;
+  box-shadow: 0 0 25px rgba(255, 183, 3, .4);
+}
+
+.story-card img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.story-card h3 {
+  color: #ffcc66;
+  margin-bottom: 8px;
+}
+
+.story-card p {
+  color: #ccc;
+  font-size: .95rem;
+}
+
+.game {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+}
+
+.scene-card {
+  max-width: 850px;
+  margin: 30px auto;
+  background: rgba(15,15,15,.88);
+  border: 1px solid #444;
+  box-shadow: 0 0 35px rgba(255, 115, 0, .25);
+}
+
+#sceneCount {
+  color: #ffb703;
+  margin-bottom: 10px;
+}
+
+#characterName {
+  color: #ffcc66;
+}
+
+#sceneTitle {
+  margin: 20px 0;
+  font-size: 1.6rem;
+}
+
+#sceneText {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.choice-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.choice {
+  padding: 18px;
+  border-radius: 18px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.roach-choice {
+  background: linear-gradient(145deg, #1b1b1b, #5a1111);
+}
+
+.phoenix-choice {
+  background: linear-gradient(145deg, #ffb703, #ff4500);
+  color: #111;
+}
+
+.choice:hover {
+  transform: scale(1.04);
+}
+
+.ending {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bad-ending {
+  background: linear-gradient(145deg, #080808, #300);
+  border: 1px solid #770000;
+}
+
+.good-ending {
+  background: linear-gradient(145deg, #190900, #5a2600);
+  border: 1px solid #ffb703;
+}
+
+#endingBox h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+}
+
+#endingBox p {
+  line-height: 1.8;
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #030303;
+  color: #aaa;
+}
+
+@media(max-width: 900px) {
+  .story-grid,
+  .mindset-box,
+  .choice-area {
+    grid-template-columns: 1fr;
+  }
+
+  .intro,
+  .stories,
+  .game,
+  .ending {
+    padding: 50px 5%;
+  }
+}
